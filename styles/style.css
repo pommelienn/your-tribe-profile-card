@@ -1,22 +1,42 @@
 * {
   box-sizing: border-box;
 
-
 }
 
 html {
-  height: 100vh;
-}
+      background-color: rgb(236, 189, 197); 
+      animation: changeColor 20s infinite; /* Animatie genaamd "changeColor" met een tijdsduur van 20 seconden en oneindige herhaling */
+    }
+
+    @keyframes changeColor {
+      0% {
+        background-color: rgb(236, 189, 197); /* Startkleur (rood) */
+      }
+      25% {
+        background-color: rgb(227, 166, 176); /* Tussenkleur (groen) op 25% van de animatie */
+      }
+      50% {
+        background-color:rgb(223, 135, 149); /* Tussenkleur (blauw) op 50% van de animatie */
+      }
+      75% {
+        background-color:rgb(224, 106, 126); /* Tussenkleur (geel) op 75% van de animatie */
+      }
+      100% {
+        background-color:rgb(236, 189, 197); /* Eindkleur (rood) op het einde van de animatie */
+      }
+    }
+
+
 
 body {
-  display: flex;
+  
   justify-content: center;
   align-items: center;
-  height: 100vh;
   font-family: open sans;
   color: #3cc3c1;
   background-color: light green;
   border-radius: 0em;
+  margin: 20em;
 
 }
 
@@ -33,30 +53,34 @@ article {
   background: rgb(174, 233, 174);
   box-shadow: 0 0 20px 20px rgba(0,0,0,.1);
   transition: .25s;
-box-sizing: content-box;
-
-
+  box-sizing: content-box;
 
 }
 
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: right;
-    justify-content: flex-end;
 
-}
 
 
 h1 {
   margin: 2rem 0 1rem;
-  color: rgb(255, 0, 195);
   margin-right: 9em;
+  margin-top: 2em;
   font-size: 50px;
   font-family: Arial, Helvetica, sans-serif;
-
-
+  color: rgb(255, 0, 195);
+  transition: color 0.3s ease; /* Voeg een overgang toe voor een soepele kleurovergang */
+  transition: transform 1s ease;
+  
 }
+
+h1:hover {
+  color: rgb(63, 37, 133)); /* Nieuwe kleur wanneer je met de muis over het element beweegt */
+  transform: scale(1.2);
+}
+
+
+
+
+
 
 svg {
   position: absolute;
@@ -76,6 +100,7 @@ img {
   border-radius: 15em;
   margin-top: -10em;
   margin-right: -30em;
+  margin-bottom: 2em;
   
 }
 
@@ -92,14 +117,13 @@ article > p {
 
 
 
-
 h3 {
   color:rgb(255, 0, 195);
   text-align:left;
- margin-left: 0em;
- margin-top: 9;
- font-family: Arial, Helvetica, sans-serif;
- border: 2rem;
+  margin-left: 0em;
+  margin-top: 9;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 2rem;
 
 
 
@@ -110,8 +134,27 @@ p {
   
   text-align:center;
 
+
+  .button-container {
+    display: inline-block;
+  }
+  
+  button {
+    display: inline-block;
+    margin-right: 10px; /* Optioneel: voeg wat ruimte tussen de knoppen toe */
+  }
   
 
-
 }
+button{ 
+  margin-bottom: 5em;
+  margin-right: 1em;
+  background-color: rgb(174, 233, 174);
+  border: none;
+  display: inline-block;
+  }
 
+
+a {
+text-decoration: none;
+}
